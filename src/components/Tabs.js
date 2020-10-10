@@ -32,9 +32,7 @@ const Tabs = () => (
       }
       key="2"
     >
-      <Empty description={<span>You need to deposit first</span>}>
-        <Button type="primary">Deposit</Button>
-      </Empty>
+      <Empty description={<span>No active crypto flows</span>} />
     </TabPane>
     <TabPane
       tab={

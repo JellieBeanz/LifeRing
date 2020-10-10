@@ -6,17 +6,17 @@ import Home from './Home'
 import NotFound from './NotFound'
 import Wallet from '../wallets'
 
-import { useWallet } from '../contexts/WalletContext'
+import { useRoot } from '../contexts/RootContext'
 
 const ConnectWallet = lazy(() => import('./ConnectWallet'))
 
 const App = () => {
-  const walletContext = useWallet()
+  const context = useRoot()
   const wallet = Wallet.instance()
 
   wallet
     .prepare({
-      context: walletContext,
+      context,
       site: { title: 'CryptoFlow', logoUrl: 'to be added' },
     })
     .catch(err => {

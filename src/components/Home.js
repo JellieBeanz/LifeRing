@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Image, Row, Col, Typography, Button } from 'antd'
 import Tabs from './Tabs'
 
+import { useRoot } from '../contexts/RootContext'
+
 const { Title, Paragraph } = Typography
 
 const PrimaryTitle = styled.span`
@@ -11,15 +13,23 @@ const PrimaryTitle = styled.span`
 `
 
 const Home = () => {
+  const cryptoFlows = ['cyFlow 1', 'cyFlow 2', 'cyFlow 3']
+  const { momsContracts } = useRoot()
+
+  momsContracts.methods
+    .getAvailableCryptoFlows()
+    .estimateGas()
+    .then(console.log)
+
   return (
     <>
       <Row gutter={48}>
         <Col span={24} md={12}>
-          <Title>CryptoFlow (cF) - Even your mom start earn with crypto</Title>
+          <Title>Place where even your mom can start to earn with crypto</Title>
           <Paragraph>
-            Trusted decentralizd place where you can start invest your
-            crypto-assets in 1-click in different profit strategies
-            (cryptoFlows), which are uploaded by trusted developers
+            A trusted, decentralized place where you can start investing your
+            crypto-assets in one click, using different profit strategies
+            (cryptoFlows), uploaded by trusted developers.
           </Paragraph>
           <Button type="primary">Start Investing</Button>
         </Col>
@@ -31,25 +41,25 @@ const Home = () => {
       <Title level={2} style={{ textAlign: 'center', margin: '2rem 0 4rem 0' }}>
         Why <PrimaryTitle>CryptoFlow</PrimaryTitle>?
       </Title>
-      <Row gutter={48} style={{ marginBottom: '2rem' }}>
+      <Row gutter={48} style={{ marginBottom: '4rem' }}>
         <Col span={24} md={8}>
           <Image src="/images/i1.png" height="200px" />
           <Title level={3} style={{ textAlign: 'center', fontSize: '1.1rem' }}>
-            One place all flows
+            Invest in 1-click
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Our platform allows to have one entrance to all possible investment
-            products
+            Today, we take the complication out of making investments in crypto.
+            We developed a platform where you can do it in one click.
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
           <Image src="/images/i2.png" height="200px" />
           <Title level={3} style={{ textAlign: 'center', fontSize: '1.1rem' }}>
-            Invest in 1-click
+            One place all flows
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Today it is really complicated to make an investement in crypto, we
-            developed a platform where you can do it in 1 click
+            Our platform allows you to access all possible investment products
+            through one entrance.
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
@@ -58,9 +68,9 @@ const Home = () => {
             Place for casual users
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Our team developed a platform for casual users not for
-            crypto-enthusiast, that's why even your mom can invest here in easy
-            way
+            Our team has developed a platform for casual users, not
+            crypto-enthusiasts. That is why even your mom can invest here
+            easily.
           </Paragraph>
         </Col>
       </Row>

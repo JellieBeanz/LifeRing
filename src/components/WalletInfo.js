@@ -4,11 +4,11 @@ import { Box, Button, Heading, Blockie, EthAddress, Text } from 'rimble-ui'
 
 import Wallet from '../wallets'
 
-import { useWallet } from '../contexts/WalletContext'
+import { useRoot } from '../contexts/RootContext'
 
 const WalletInfo = () => {
   const history = useHistory()
-  const { type, defaultAddress } = useWallet()
+  const { type, defaultAddress } = useRoot()
 
   const _logout = async () => {
     await Wallet.instance().disconnect()

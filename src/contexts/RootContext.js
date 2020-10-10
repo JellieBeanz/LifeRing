@@ -1,19 +1,32 @@
 import React, { createContext, useContext, useState } from 'react'
 import * as _ from 'lodash'
+import Web3 from 'web3'
 
-const initialWallet = {
-  type: localStorage.getItem('type'),
-  defaultAddress: localStorage.getItem('defaultAddress'),
+import abi from '../utils/abi.json'
+
+const web3 = new Web3()
+
+if (window.ethereum) {
+  web3.setProvider(window.ethereum)
 }
 
-export const WalletContext = createContext(initialWallet)
+const initialRoot = {
+  type: localStorage.getItem('type'),
+  defaultAddress: localStorage.getItem('defaultAddress'),
+  momsContracts: new web3.eth.Contract(
+    abi,
+    '0x292c1b22d4e110c0204e2161223ca1e8d0aab66a'
+  ),
+}
 
-export const useWallet = () => useContext(WalletContext)
+export const RootContext = createContext(initialRoot)
+
+export const useRoot = () => useContext(RootContext)
 
 export default ({ children }) => {
-  const [type, setType] = useState(initialWallet.type)
+  const [type, setType] = useState(initialRoot.type)
   const [defaultAddress, setDefaultAddress] = useState(
-    initialWallet.defaultAddress
+    initialRoot.defaultAddress
   )
 
   const isLoggedIn = () => {
@@ -35,7 +48,7 @@ export default ({ children }) => {
   }
 
   return (
-    <WalletContext.Provider
+    <RootContext.Provider
       value={{
         type,
         setType,
@@ -44,9 +57,11 @@ export default ({ children }) => {
         isLoggedIn,
         logOut,
         logIn,
+        web3,
+        momsContracts: initialRoot.momsContracts,
       }}
     >
       {children}
-    </WalletContext.Provider>
+    </RootContext.Provider>
   )
 }

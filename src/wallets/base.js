@@ -39,7 +39,7 @@ class IWalletBase {
     }
 
     const { logIn } = this.context
-    console.log(this.context)
+
     logIn(this.type, _.get(accounts, '0', ''))
     // console.log(`User's address changed to "${this.store.defaultAddress}".`);
   }

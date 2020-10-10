@@ -25,7 +25,8 @@ class MetamaskWallet extends IWalletBase {
     this.provider = window.ethereum || window.web3.currentProvider
 
     // Initialize a Web3 object
-    this.web3 = new Web3(this.provider)
+    this.web3 = this.context.web3
+    this.web3.setProvider(this.provider)
 
     // Initialize Base
     await super.init()

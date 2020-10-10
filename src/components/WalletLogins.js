@@ -39,18 +39,18 @@ const WalletLogins = () => {
   const history = useHistory()
   const wallet = Wallet.instance()
 
+  const _walletConnect = walletType => async () => {
+    try {
+      await wallet.init(walletType)
+      await wallet.connect()
+      history.push('/connect-wallet')
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   const walletButtons = _.map(Wallet.typeMap(), (walletData, walletType) => {
     const disabled = !Wallet.isEnabled(walletType)
-
-    const _walletConnect = walletType => async () => {
-      try {
-        await wallet.init(walletType)
-        await wallet.connect()
-        history.push('/connect-wallet')
-      } catch (err) {
-        console.error(err)
-      }
-    }
 
     return (
       <WalletButton

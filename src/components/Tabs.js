@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tabs as AntTabs, Empty, Button } from 'antd'
+import { Tabs as AntTabs, Empty } from 'antd'
 import {
   LineChartOutlined,
   HourglassOutlined,
@@ -7,6 +7,7 @@ import {
 } from '@ant-design/icons'
 
 import Marketplace from './Marketplace'
+import ActiveFlows from './ActiveFlows'
 
 const { TabPane } = AntTabs
 
@@ -32,7 +33,7 @@ const Tabs = () => (
       }
       key="2"
     >
-      <Empty description={<span>No active crypto flows</span>} />
+      <ActiveFlows />
     </TabPane>
     <TabPane
       tab={

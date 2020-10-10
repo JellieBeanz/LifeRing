@@ -1,11 +1,6 @@
 import React from 'react'
 import { Tooltip, Row, Col, Card, Statistic, Image } from 'antd'
-import {
-  PlusOutlined,
-  EyeOutlined,
-  ArrowUpOutlined,
-  ArrowDownOutlined,
-} from '@ant-design/icons'
+import { PlusOutlined, EyeOutlined } from '@ant-design/icons'
 
 const Marketplace = () => {
   const flows = [
@@ -23,8 +18,12 @@ const Marketplace = () => {
           <Card
             style={{ boxShadow: '0px 0px 18px 0px rgba(0,0,0,0.1)' }}
             actions={[
-              <PlusOutlined key="deposit" />,
-              <EyeOutlined key="details" />,
+              <Tooltip title="Deposit">
+                <PlusOutlined key="deposit" />
+              </Tooltip>,
+              <Tooltip title="Details">
+                <EyeOutlined key="details" />
+              </Tooltip>,
             ]}
           >
             <div style={{ float: 'right' }}>

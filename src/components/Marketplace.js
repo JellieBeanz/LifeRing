@@ -17,7 +17,7 @@ const Marketplace = () => {
   ]
 
   return (
-    <Row gutter={24}>
+    <Row gutter={24} style={{ padding: '2rem' }}>
       {flows.map(flow => (
         <Col md={8} style={{ marginBottom: '2rem' }}>
           <Card

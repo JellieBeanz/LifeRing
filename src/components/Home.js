@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { Image, Row, Col, Typography, Button } from 'antd'
 import Tabs from './Tabs'
 
-import { useRoot } from '../contexts/RootContext'
-
 const { Title, Paragraph } = Typography
 
 const PrimaryTitle = styled.span`
@@ -13,14 +11,6 @@ const PrimaryTitle = styled.span`
 `
 
 const Home = () => {
-  const cryptoFlows = ['cyFlow 1', 'cyFlow 2', 'cyFlow 3']
-  const { momsContracts } = useRoot()
-
-  momsContracts.methods
-    .getAvailableCryptoFlows()
-    .estimateGas()
-    .then(console.log)
-
   return (
     <>
       <Row gutter={48}>

@@ -1,6 +1,4 @@
 // Frameworks
-import Web3 from 'web3'
-
 import IWalletBase from './base'
 import { GLOBALS } from '../utils/globals'
 

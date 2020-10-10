@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip, Row, Col, Card, Statistic, Image } from 'antd'
+import { Tooltip, Row, Col, Card, Statistic } from 'antd'
 import { PlusOutlined, EyeOutlined } from '@ant-design/icons'
 
 const Marketplace = () => {

@@ -53,7 +53,11 @@ const WalletLogins = () => {
     }
 
     return (
-      <WalletButton onClick={_walletConnect(walletType)} disabled={disabled}>
+      <WalletButton
+        key={walletData.name}
+        onClick={_walletConnect(walletType)}
+        disabled={disabled}
+      >
         <img src={walletData.icon} alt={walletData.name} />
         {walletData.name}
       </WalletButton>

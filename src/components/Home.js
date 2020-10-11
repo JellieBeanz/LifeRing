@@ -86,7 +86,9 @@ const Home = () => {
     <>
       <Row gutter={48}>
         <Col span={24} md={14} style={{ marginTop: '1rem' }}>
-          <Title>Place where even your mom can start to earn with crypto</Title>
+          <Title>
+            The Place where even your mom can start to earn with crypto
+          </Title>
           <Paragraph>
             A trusted, decentralized place where you can start investing your
             crypto-assets in one click, using different profit strategies

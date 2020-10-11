@@ -68,6 +68,7 @@ class Wallet {
   async disconnect() {
     localStorage.removeItem('type')
     localStorage.removeItem('defaultAddress')
+    window.location.reload()
     if (!this.wallet) {
       return
     }

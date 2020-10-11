@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import { Row, Col, Card, Statistic, Button } from 'antd'
+import { Row, Col, Card, Statistic, Button, Modal, InputNumber } from 'antd'
 import { PlusOutlined, EyeOutlined } from '@ant-design/icons'
+
+import { useRoot } from '../contexts/RootContext'
 
 const CardButton = styled(Button)`
   border-radius: 20px;
@@ -14,6 +17,25 @@ const Marketplace = () => {
   const flows = [
     { deposited: 0.3, intereset: 2.5, fee: 12124, developedBy: 'CF Team' },
   ]
+
+  const history = useHistory()
+
+  const { isLoggedIn } = useRoot()
+
+  const [visible, setVisible] = useState(false)
+
+  const showModal = () => {
+    setVisible(true)
+  }
+
+  const handleOk = e => {
+    setVisible(false)
+    history.push('/connect-wallet')
+  }
+
+  const handleCancel = e => {
+    setVisible(false)
+  }
 
   return (
     <Row gutter={24} style={{ padding: '2rem' }}>
@@ -42,7 +64,7 @@ const Marketplace = () => {
               valueStyle={{ fontSize: '1rem' }}
             />
 
-            <CardButton type="primary">
+            <CardButton type="primary" onClick={showModal}>
               <PlusOutlined />
               Deposit
             </CardButton>
@@ -78,6 +100,26 @@ const Marketplace = () => {
           </Card>
         </Col>
       ))}
+      <Modal
+        title="Deposit your assets to choosen CryptoFlow"
+        visible={visible}
+        onOk={handleOk}
+        okText={isLoggedIn() ? 'Deposit' : 'Connect Wallet'}
+        onCancel={handleCancel}
+      >
+        {isLoggedIn() ? (
+          <>
+            Enter Amount:&nbsp;
+            <InputNumber placeholder="0.00 ETH" />
+          </>
+        ) : (
+          <>
+            <div style={{ marginBottom: '1rem' }}>
+              You should connect your wallet first!
+            </div>
+          </>
+        )}
+      </Modal>
     </Row>
   )
 }

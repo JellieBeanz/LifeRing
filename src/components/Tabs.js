@@ -44,7 +44,10 @@ const Tabs = () => (
       }
       key="3"
     >
-      <Empty description={<span>No records</span>} />
+      <Empty
+        description={<span>No records</span>}
+        style={{ padding: '2rem 0' }}
+      />
     </TabPane>
   </AntTabs>
 )

@@ -8,7 +8,10 @@ const ActiveFlows = () => {
   const { isLoggedIn } = useRoot()
 
   return isLoggedIn() ? (
-    <Empty description={<span>No active crypto flows</span>} />
+    <Empty
+      style={{ padding: '2rem' }}
+      description={<span>No active crypto flows</span>}
+    />
   ) : (
     <div
       style={{

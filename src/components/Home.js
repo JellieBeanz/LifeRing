@@ -105,7 +105,7 @@ const Home = () => {
           <HandImage src="/images/e2.svg" alt="Grow here" height="200px" />
         </Col>
         <Col span={24} md={10}>
-          <FrontImage src="/images/e1.svg" alt="Money Flow" />
+          <FrontImage src="/images/et1.svg" alt="Money Flow" />
         </Col>
       </Row>
 
@@ -125,8 +125,8 @@ const Home = () => {
             Invest in 1-click
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Today, we take the complication out of making investments in crypto.
-            We developed a platform where you can do it in one click.
+            Today it is really complicated to make an investment in crypto, We
+            developed a platform where you can do it in 1-click.
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
@@ -141,8 +141,8 @@ const Home = () => {
             One place all flows
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Our platform allows you to access all possible investment products
-            through one entrance.
+            Our platform allows you to have one entrance to all possible
+            investment products.
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
@@ -157,9 +157,8 @@ const Home = () => {
             Place for casual users
           </Title>
           <Paragraph style={{ textAlign: 'center' }}>
-            Our team has developed a platform for casual users, not
-            crypto-enthusiasts. That is why even your mom can invest here
-            easily.
+            Our team developed a platform for casual users, not for
+            crypto-enthusiasts. That's why even your mom can invest easily.
           </Paragraph>
         </Col>
       </Row>

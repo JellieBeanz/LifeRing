@@ -52,7 +52,6 @@ const FrontImage = styled.img`
   width: 380px;
   display: block;
   margin: 0 auto;
-  margin-top: -2rem;
 
   @media screen and (max-width: 768px) {
     margin-top: 0;

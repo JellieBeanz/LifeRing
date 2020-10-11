@@ -47,6 +47,13 @@ export default ({ children }) => {
     setDefaultAddress(defaultAddress)
   }
 
+  const getBalance = () =>
+    new Promise((resolve, reject) =>
+      web3.eth.getBalance(defaultAddress).then(res => {
+        resolve(res)
+      })
+    )
+
   return (
     <RootContext.Provider
       value={{
@@ -59,6 +66,7 @@ export default ({ children }) => {
         logIn,
         web3,
         momsContracts: initialRoot.momsContracts,
+        getBalance,
       }}
     >
       {children}

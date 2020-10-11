@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { useRoot } from '../contexts/RootContext'
+
 const Header = styled.header`
   display: flex;
   background: #fff;
@@ -55,17 +57,25 @@ const NavLink = styled(Link)`
   }
 `
 
-const HeaderComponent = () => (
-  <Header>
-    <Logo to="/">
-      <span>CryptoFlow</span>
-    </Logo>
+const HeaderComponent = () => {
+  const { isLoggedIn, defaultAddress } = useRoot()
 
-    <Nav>
-      <NavLink to="/">Marketplace</NavLink>
-      <NavLink to="/connect-wallet">Wallet</NavLink>
-    </Nav>
-  </Header>
-)
+  return (
+    <Header>
+      <Logo to="/">
+        <span>CryptoFlow</span>
+      </Logo>
+
+      <Nav>
+        <NavLink to="/">Marketplace</NavLink>
+        <NavLink to="/connect-wallet">
+          {isLoggedIn()
+            ? `Connected ${defaultAddress.substring(0, 6)}...`
+            : 'Connect Wallet'}
+        </NavLink>
+      </Nav>
+    </Header>
+  )
+}
 
 export default HeaderComponent

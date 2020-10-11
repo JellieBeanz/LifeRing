@@ -116,7 +116,8 @@ const Home = () => {
         <Col span={24} md={8}>
           <Image
             alt="1-click"
-            src="/images/i1.png"
+            src="/images/j1.svg"
+            style={{ display: 'block' }}
             height="200px"
             className="fImage"
           />
@@ -131,7 +132,8 @@ const Home = () => {
         <Col span={24} md={8}>
           <Image
             alt="One place"
-            src="/images/i2.png"
+            src="/images/j3.svg"
+            style={{ display: 'block' }}
             height="200px"
             className="fImage"
           />
@@ -146,7 +148,8 @@ const Home = () => {
         <Col span={24} md={8}>
           <Image
             alt="Casual users"
-            src="/images/i3.png"
+            src="/images/j4.svg"
+            style={{ display: 'block' }}
             height="200px"
             className="fImage"
           />
@@ -164,7 +167,7 @@ const Home = () => {
       <Tabs />
 
       <Title level={2} style={{ textAlign: 'center', margin: '2rem 0 4rem 0' }}>
-        How it works?
+        How does it work?
         <VideoLink style={{ textAlign: 'center', display: 'block' }}>
           <PlayCircleOutlined className="icon" />
           <a href="/">Watch video</a>
@@ -173,21 +176,41 @@ const Home = () => {
 
       <Row>
         <Col span={24} sm={12} md={6}>
-          <Image src="/images/m1.png" height="200px" className="fImage" />
+          <Image
+            src="/images/j5.svg"
+            style={{ display: 'block' }}
+            height="200px"
+            className="fImage"
+          />
           <Paragraph style={{ textAlign: 'center' }}>Connect Wallet</Paragraph>
         </Col>
         <Col span={24} sm={12} md={6}>
-          <Image src="/images/m2.png" height="200px" className="fImage" />
+          <Image
+            src="/images/j2.svg"
+            style={{ display: 'block' }}
+            height="200px"
+            className="fImage"
+          />
           <Paragraph style={{ textAlign: 'center' }}>
             Choose cryptoFlow
           </Paragraph>
         </Col>
         <Col span={24} sm={12} md={6}>
-          <Image src="/images/m3.png" height="200px" className="fImage" />
+          <Image
+            src="/images/e2.svg"
+            style={{ display: 'block' }}
+            height="200px"
+            className="fImage"
+          />
           <Paragraph style={{ textAlign: 'center' }}>Deposit Crypto</Paragraph>
         </Col>
         <Col span={24} sm={12} md={6}>
-          <Image src="/images/m4.png" height="200px" className="fImage" />
+          <Image
+            src="/images/j6.svg"
+            style={{ display: 'block' }}
+            height="200px"
+            className="fImage"
+          />
           <Paragraph style={{ textAlign: 'center' }}>
             Earn and Withdraw
           </Paragraph>

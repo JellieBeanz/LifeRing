@@ -31,17 +31,23 @@ const Marketplace = () => {
 
   const history = useHistory()
 
-  const { isLoggedIn } = useRoot()
+  const { isLoggedIn, deposit, defaultAddress } = useRoot()
 
+  const [amountWei, setAmountWei] = useState(0)
   const [visible, setVisible] = useState(false)
 
   const showModal = () => {
     setVisible(true)
   }
 
-  const handleOk = e => {
+  const gotoWallet = e => {
     setVisible(false)
     history.push('/connect-wallet')
+  }
+
+  const handleOk = () => {
+    console.log(defaultAddress, String(amountWei), 'test')
+    deposit(defaultAddress, String(amountWei), 'test')
   }
 
   const handleCancel = e => {
@@ -129,14 +135,18 @@ const Marketplace = () => {
         <Modal
           title="Deposit your assets to choosen cryptoFlow"
           visible={visible}
-          onOk={handleOk}
+          onOk={isLoggedIn() ? handleOk : gotoWallet}
           okText={isLoggedIn() ? 'Deposit' : 'Connect Wallet'}
           onCancel={handleCancel}
         >
           {isLoggedIn() ? (
             <>
               Enter Amount:&nbsp;
-              <InputNumber placeholder="0.00 ETH" />
+              <InputNumber
+                placeholder="0.00 ETH"
+                onChange={setAmountWei}
+                value={amountWei}
+              />
             </>
           ) : (
             <>

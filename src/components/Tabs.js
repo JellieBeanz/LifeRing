@@ -12,7 +12,7 @@ import ActiveFlows from './ActiveFlows'
 const { TabPane } = AntTabs
 
 const Tabs = () => (
-  <AntTabs defaultActiveKey="1">
+  <AntTabs defaultActiveKey="1" id="marketplace" centered>
     <TabPane
       tab={
         <span>

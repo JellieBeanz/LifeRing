@@ -1,6 +1,8 @@
 import React from 'react'
+import { HashLink } from 'react-router-hash-link'
 import styled from 'styled-components'
-import { Image, Row, Col, Typography, Button } from 'antd'
+import { Image, Row, Col, Typography } from 'antd'
+import { PlayCircleOutlined } from '@ant-design/icons'
 import Tabs from './Tabs'
 
 const { Title, Paragraph } = Typography
@@ -10,21 +12,100 @@ const PrimaryTitle = styled.span`
   font-weight: 700;
 `
 
+const ButtonsGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+const FancyButton = styled(HashLink)`
+  padding: 0.3rem 1.4rem;
+  font-size: 0.9rem;
+  background: var(--primary-color);
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+
+  &:hover {
+    background: var(--secondary-color);
+    color: #fff;
+  }
+`
+
+const VideoLink = styled.span`
+  font-size: 0.9rem;
+  display: flex;
+  margin-right: 2rem;
+  align-items: center;
+
+  .icon {
+    margin-right: 0.6rem;
+    font-size: 1.4rem;
+  }
+
+  a {
+    font-weight: 600;
+  }
+`
+
+const FrontImage = styled.img`
+  width: 380px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    display: none;
+  }
+`
+
+const FooterImage = styled.img`
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+`
+
+const HandImage = styled.img`
+  margin-left: 2.2rem;
+  width: 200px;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin: 0 auto;
+  }
+`
+
 const Home = () => {
   return (
     <>
       <Row gutter={48}>
-        <Col span={24} md={12}>
+        <Col span={24} md={14} style={{ marginTop: '1rem' }}>
           <Title>Place where even your mom can start to earn with crypto</Title>
           <Paragraph>
             A trusted, decentralized place where you can start investing your
             crypto-assets in one click, using different profit strategies
             (cryptoFlows), uploaded by trusted developers.
           </Paragraph>
-          <Button type="primary">Start Investing</Button>
+          <ButtonsGroup>
+            <VideoLink>
+              <PlayCircleOutlined className="icon" />
+              <a href="/">Watch video</a>
+            </VideoLink>
+
+            <FancyButton smooth to="/#marketplace">
+              Go to Marketplace
+            </FancyButton>
+          </ButtonsGroup>
+          <HandImage src="/images/e2.svg" alt="Grow here" height="200px" />
         </Col>
-        <Col span={24} md={12}>
-          <Image src="/images/moneyflow.png" alt="Money Flow" />
+        <Col span={24} md={10}>
+          <FrontImage src="/images/e1.svg" alt="Money Flow" />
         </Col>
       </Row>
 
@@ -33,7 +114,12 @@ const Home = () => {
       </Title>
       <Row gutter={48} style={{ marginBottom: '4rem' }}>
         <Col span={24} md={8}>
-          <Image src="/images/i1.png" height="200px" />
+          <Image
+            alt="1-click"
+            src="/images/i1.png"
+            height="200px"
+            className="fImage"
+          />
           <Title level={3} style={{ textAlign: 'center', fontSize: '1.1rem' }}>
             Invest in 1-click
           </Title>
@@ -43,7 +129,12 @@ const Home = () => {
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
-          <Image src="/images/i2.png" height="200px" />
+          <Image
+            alt="One place"
+            src="/images/i2.png"
+            height="200px"
+            className="fImage"
+          />
           <Title level={3} style={{ textAlign: 'center', fontSize: '1.1rem' }}>
             One place all flows
           </Title>
@@ -53,7 +144,12 @@ const Home = () => {
           </Paragraph>
         </Col>
         <Col span={24} md={8}>
-          <Image src="/images/i3.png" height="200px" />
+          <Image
+            alt="Casual users"
+            src="/images/i3.png"
+            height="200px"
+            className="fImage"
+          />
           <Title level={3} style={{ textAlign: 'center', fontSize: '1.1rem' }}>
             Place for casual users
           </Title>
@@ -64,7 +160,72 @@ const Home = () => {
           </Paragraph>
         </Col>
       </Row>
+
       <Tabs />
+
+      <Title level={2} style={{ textAlign: 'center', margin: '2rem 0 4rem 0' }}>
+        How it works?
+        <VideoLink style={{ textAlign: 'center', display: 'block' }}>
+          <PlayCircleOutlined className="icon" />
+          <a href="/">Watch video</a>
+        </VideoLink>
+      </Title>
+
+      <Row>
+        <Col span={24} sm={12} md={6}>
+          <Image src="/images/m1.png" height="200px" className="fImage" />
+          <Paragraph style={{ textAlign: 'center' }}>Connect Wallet</Paragraph>
+        </Col>
+        <Col span={24} sm={12} md={6}>
+          <Image src="/images/m2.png" height="200px" className="fImage" />
+          <Paragraph style={{ textAlign: 'center' }}>
+            Choose CryptoFlow
+          </Paragraph>
+        </Col>
+        <Col span={24} sm={12} md={6}>
+          <Image src="/images/m3.png" height="200px" className="fImage" />
+          <Paragraph style={{ textAlign: 'center' }}>Deposit Crypto</Paragraph>
+        </Col>
+        <Col span={24} sm={12} md={6}>
+          <Image src="/images/m4.png" height="200px" className="fImage" />
+          <Paragraph style={{ textAlign: 'center' }}>
+            Earn and Withdraw
+          </Paragraph>
+        </Col>
+      </Row>
+
+      <Row
+        style={{
+          padding: '4rem 4rem 0rem 4rem',
+          background: '#fafafa',
+          marginTop: '2rem',
+        }}
+      >
+        <Col spn={24} md={12}>
+          <Title level={3}>
+            Invest your crypto assets in 1-click with&nbsp;
+            <PrimaryTitle>cryptoflow</PrimaryTitle>
+          </Title>
+          <Row style={{ margin: '1.2rem 0' }}>
+            <Col span={8}>No hussle</Col>
+            <Col span={8}>No pain</Col>
+            <Col span={8}>Easy-peasy</Col>
+          </Row>
+          <ButtonsGroup>
+            <VideoLink>
+              <PlayCircleOutlined className="icon" />
+              <a href="/">Watch video</a>
+            </VideoLink>
+
+            <FancyButton smooth to="/#marketplace">
+              Go to Marketplace
+            </FancyButton>
+          </ButtonsGroup>
+        </Col>
+        <Col spn={24} md={12}>
+          <FooterImage src="/images/e3.svg" />
+        </Col>
+      </Row>
     </>
   )
 }

@@ -17,7 +17,7 @@ const App = () => {
   wallet
     .prepare({
       context,
-      site: { title: 'CryptoFlow', logoUrl: 'to be added' },
+      site: { title: 'cryptoFlow', logoUrl: 'to be added' },
     })
     .catch(err => {
       console.log(err)

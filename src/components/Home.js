@@ -110,7 +110,7 @@ const Home = () => {
       </Row>
 
       <Title level={2} style={{ textAlign: 'center', margin: '2rem 0 4rem 0' }}>
-        Why <PrimaryTitle>CryptoFlow</PrimaryTitle>?
+        Why <PrimaryTitle>cryptoFlow</PrimaryTitle>?
       </Title>
       <Row gutter={48} style={{ marginBottom: '4rem' }}>
         <Col span={24} md={8}>
@@ -179,7 +179,7 @@ const Home = () => {
         <Col span={24} sm={12} md={6}>
           <Image src="/images/m2.png" height="200px" className="fImage" />
           <Paragraph style={{ textAlign: 'center' }}>
-            Choose CryptoFlow
+            Choose cryptoFlow
           </Paragraph>
         </Col>
         <Col span={24} sm={12} md={6}>
@@ -204,7 +204,7 @@ const Home = () => {
         <Col spn={24} md={12}>
           <Title level={3}>
             Invest your crypto assets in 1-click with&nbsp;
-            <PrimaryTitle>cryptoflow</PrimaryTitle>
+            <PrimaryTitle>cryptoFlow</PrimaryTitle>
           </Title>
           <Row style={{ margin: '1.2rem 0' }}>
             <Col span={8}>No hussle</Col>

@@ -86,7 +86,7 @@ const HeaderComponent = () => {
   return (
     <Header>
       <Logo to="/">
-        <div>CryptoFlow</div>
+        <div>cryptoFlow</div>
         <span>Invest your crypto assets in 1-click</span>
       </Logo>
 

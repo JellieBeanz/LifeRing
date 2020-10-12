@@ -64,10 +64,10 @@ export default ({ children }) => {
 
   const deposit = (address, amount, name) =>
     initialRoot.depositManager.methods
-      .deposit(address, web3.utils.toWei(amount, 'finney'), name)
+	  .deposit(address, web3.utils.toWei(amount, 'ether'), name)
       .send({
         from: address,
-        value: web3.utils.toWei(amount, 'finney'),
+        value: web3.utils.toWei(amount, 'ether'),
       })
 
   return (

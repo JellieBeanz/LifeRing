@@ -46,8 +46,8 @@ const Marketplace = () => {
   }
 
   const handleOk = () => {
-    console.log(defaultAddress, String(amountWei), 'test')
-    deposit(defaultAddress, String(amountWei), 'test')
+    console.log(defaultAddress, String(amountWei), 'flow0')
+    deposit(defaultAddress, String(amountWei), 'flow0')
   }
 
   const handleCancel = e => {

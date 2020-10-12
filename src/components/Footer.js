@@ -13,7 +13,7 @@ const Footer = styled.footer`
 
 const FooterComponent = () => (
   <Footer>
-    <div>@ World Blockchain Hackathon 2020</div>
+    <div>Copyright 2020</div>
   </Footer>
 )
 

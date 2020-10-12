@@ -2,7 +2,7 @@ import React from 'react'
 import { Empty, Button } from 'antd'
 import { Link } from 'react-router-dom'
 
-import { useRoot } from '../contexts/RootContext'
+import { useRoot } from '../../contexts/RootContext'
 
 const ActiveFlows = () => {
   const { isLoggedIn } = useRoot()

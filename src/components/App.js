@@ -8,7 +8,7 @@ import Wallet from '../wallets'
 
 import { useRoot } from '../contexts/RootContext'
 
-const ConnectWallet = lazy(() => import('./ConnectWallet'))
+const ConnectWallet = lazy(() => import('./custom/ConnectWallet'))
 
 const App = () => {
   const context = useRoot()

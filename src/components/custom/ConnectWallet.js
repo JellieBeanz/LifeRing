@@ -3,7 +3,7 @@ import React from 'react'
 import WalletInfo from './WalletInfo'
 import WalletLogins from './WalletLogins'
 
-import { useRoot } from '../contexts/RootContext'
+import { useRoot } from '../../contexts/RootContext'
 
 const ConnectWallet = () => {
   const { isLoggedIn } = useRoot()

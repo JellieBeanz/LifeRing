@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link'
 import styled from 'styled-components'
 import { Image, Row, Col, Typography } from 'antd'
 import { PlayCircleOutlined } from '@ant-design/icons'
-import Tabs from './Tabs'
+import Tabs from './custom/Tabs'
 
 const { Title, Paragraph } = Typography
 

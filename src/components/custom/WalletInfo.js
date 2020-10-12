@@ -3,9 +3,9 @@ import { Descriptions } from 'antd'
 import { useHistory } from 'react-router-dom'
 import { Table, Box, Button, Blockie, EthAddress, Text } from 'rimble-ui'
 
-import Wallet from '../wallets'
+import Wallet from '../../wallets'
 
-import { useRoot } from '../contexts/RootContext'
+import { useRoot } from '../../contexts/RootContext'
 
 const WalletInfo = () => {
   const [balance, setBalance] = useState(0)

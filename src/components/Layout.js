@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from './Header'
-import Footer from './Footer'
+import Header from './layout/Header'
+import Footer from './layout/Footer'
 
 const Main = styled.main`
   padding: 3rem 2rem;

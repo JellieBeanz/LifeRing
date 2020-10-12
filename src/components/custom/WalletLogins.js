@@ -4,7 +4,7 @@ import { Heading, Box } from 'rimble-ui'
 import styled from 'styled-components'
 import * as _ from 'lodash'
 
-import Wallet from '../wallets'
+import Wallet from '../../wallets'
 
 const WalletButtons = styled.div`
   box-sizing: border-box;

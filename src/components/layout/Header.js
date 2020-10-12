@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import styled, { css } from 'styled-components'
 
-import { useRoot } from '../contexts/RootContext'
+import { useRoot } from '../../contexts/RootContext'
 
 const Header = styled.header`
   display: flex;
@@ -86,7 +86,7 @@ const HeaderComponent = () => {
   return (
     <Header>
       <Logo to="/">
-        <div>cryptoFlow</div>
+        <div>VeriPay</div>
         <span>Invest your crypto assets in 1-click</span>
       </Logo>
 

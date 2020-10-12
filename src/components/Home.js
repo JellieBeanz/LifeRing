@@ -91,7 +91,7 @@ const Home = () => {
           <Paragraph>
             A trusted, decentralized place where you can start investing your
             crypto-assets in one click, using different profit strategies
-            (cryptoFlows), uploaded by trusted developers.
+            (VeriPays), uploaded by trusted developers.
           </Paragraph>
           <ButtonsGroup>
             <VideoLink>
@@ -111,7 +111,7 @@ const Home = () => {
       </Row>
 
       <Title level={2} style={{ textAlign: 'center', margin: '2rem 0 4rem 0' }}>
-        Why <PrimaryTitle>cryptoFlow</PrimaryTitle>?
+        Why <PrimaryTitle>VeriPay</PrimaryTitle>?
       </Title>
       <Row gutter={48} style={{ marginBottom: '4rem' }}>
         <Col span={24} md={8}>
@@ -192,7 +192,7 @@ const Home = () => {
             className="fImage"
           />
           <Paragraph style={{ textAlign: 'center' }}>
-            Choose cryptoFlow
+            Choose VeriPay
           </Paragraph>
         </Col>
         <Col span={24} sm={12} md={6}>
@@ -227,7 +227,7 @@ const Home = () => {
         <Col spn={24} md={12}>
           <Title level={3}>
             Invest your crypto assets in 1-click with&nbsp;
-            <PrimaryTitle>cryptoFlow</PrimaryTitle>
+            <PrimaryTitle>VeriPay</PrimaryTitle>
           </Title>
           <Row style={{ margin: '1.2rem 0' }}>
             <Col span={8}>No hussle</Col>

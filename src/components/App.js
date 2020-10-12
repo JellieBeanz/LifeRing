@@ -17,7 +17,7 @@ const App = () => {
   wallet
     .prepare({
       context,
-      site: { title: 'cryptoFlow', logoUrl: 'to be added' },
+      site: { title: 'VeriPay', logoUrl: 'to be added' },
     })
     .catch(err => {
       console.log(err)

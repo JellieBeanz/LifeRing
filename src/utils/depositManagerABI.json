@@ -37,7 +37,7 @@
 			},
 			{
 				"internalType": "string",
-				"name": "cryptoFlowName",
+				"name": "VeriPayName",
 				"type": "string"
 			}
 		],
@@ -54,7 +54,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "getAvailableCryptoFlows",
+		"name": "getAvailableVeriPays",
 		"outputs": [
 			{
 				"internalType": "string[]",
@@ -107,16 +107,16 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "cryptoFlowName",
+				"name": "VeriPayName",
 				"type": "string"
 			},
 			{
 				"internalType": "address",
-				"name": "cryptoFlowContractAddress",
+				"name": "VeriPayContractAddress",
 				"type": "address"
 			}
 		],
-		"name": "registerCryptoFlow",
+		"name": "registerVeriPay",
 		"outputs": [
 			{
 				"internalType": "string",

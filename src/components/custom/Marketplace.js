@@ -13,7 +13,7 @@ import {
 } from 'antd'
 import { PlusOutlined, EyeOutlined } from '@ant-design/icons'
 
-import { useRoot } from '../contexts/RootContext'
+import { useRoot } from '../../contexts/RootContext'
 
 const { Paragraph } = Typography
 
@@ -67,7 +67,7 @@ const Marketplace = () => {
           maxWidth: '600px',
         }}
       >
-        Here you can find different investment cryptoFlows. Choose any one and
+        Here you can find different investment VeriPays. Choose any one and
         start earning by clicking the “Deposit” button.
       </Paragraph>
       <Row gutter={24} style={{ padding: '2rem' }}>
@@ -126,14 +126,14 @@ const Marketplace = () => {
                   textAlign: 'center',
                 }}
               >
-                Here will be another cryptoFlow when it will be created by some
+                Here will be another VeriPay when it will be created by some
                 trusted partner.
               </span>
             </Card>
           </Col>
         ))}
         <Modal
-          title="Deposit your assets to choosen cryptoFlow"
+          title="Deposit your assets to choosen VeriPay"
           visible={visible}
           onOk={isLoggedIn() ? handleOk : gotoWallet}
           okText={isLoggedIn() ? 'Deposit' : 'Connect Wallet'}

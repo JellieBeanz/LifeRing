@@ -87,7 +87,7 @@ const HeaderComponent = () => {
     <Header>
       <Logo to="/">
         <div>VeriPay</div>
-        <span>Invest your crypto assets in 1-click</span>
+        <span>Deposit, borrow, get insurance</span>
       </Logo>
 
       <Nav>

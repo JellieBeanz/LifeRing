@@ -226,7 +226,7 @@ const Home = () => {
       >
         <Col spn={24} md={12}>
           <Title level={3}>
-            Invest your crypto assets in 1-click with&nbsp;
+            Do business globally with&nbsp;
             <PrimaryTitle>VeriPay</PrimaryTitle>
           </Title>
           <Row style={{ margin: '1.2rem 0' }}>

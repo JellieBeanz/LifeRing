@@ -1,0 +1,10 @@
+The sizes are not a hard requirement, we just need those approximate dimensions
+
+380x420 Main image: A boat, a buoy, a life ring
+200x200 A boat
+200x200 An image of tokens or a reference to earning crypto
+200x200 Some containers or reference to marine trade
+200x200 Pirates or a reference to marine risk
+200x200 An anchor
+
+Main objectives:

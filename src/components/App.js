@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Layout from './Layout'
-import Home from './Home'
-import NotFound from './NotFound'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 import Wallet from '../wallets'
 
 import { useRoot } from '../contexts/RootContext'

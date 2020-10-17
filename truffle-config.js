@@ -13,6 +13,11 @@ module.exports = {
 	networks: {
 		ganache: {
 			provider: () => new HDWalletProvider([Ganache_privateKey], `https://0.0.0.0:7545`),
+			network_id: 5777,
+			gas: 5500000,
+			confirmations: 0,
+			timeoutBlocks: 50,
+			skipDryRun: true
 		},
 
 		// Another network with more advanced options...

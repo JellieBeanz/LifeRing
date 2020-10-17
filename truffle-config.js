@@ -8,11 +8,11 @@ const Ganache_privateKey = process.env.GANACHE_PRIVATE_KEY;
 const Ropsten_privateKey = process.env.ROPSTEN_PRIVATE_KEY;
 
 module.exports = {
-    contracts_directory: './contracts/CryptoFlow',
+    contracts_directory: './contracts',
 
 	networks: {
 		ganache: {
-			provider: () => new HDWalletProvider([Ganache_privateKey], `https://0.0.0.0:7545`),
+			provider: () => new HDWalletProvider([Ganache_privateKey], `http://0.0.0.0:7545`),
 			network_id: 5777,
 			gas: 5500000,
 			confirmations: 0,
@@ -57,7 +57,7 @@ module.exports = {
 	// Configure your compilers
 	compilers: {
 		solc: {
-		version: "0.6.12",    // Fetch exact version from solc-bin (default: truffle's version)
+		version: "0.6.6",    // Fetch exact version from solc-bin (default: truffle's version)
 		docker: false,        // Use "0.5.1" you've installed locally with docker (default: false)
 		settings: {          // See the solidity docs for advice about optimization and evmVersion
 		optimizer: {
